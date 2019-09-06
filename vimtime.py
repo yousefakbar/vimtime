@@ -45,6 +45,7 @@ def main():
             continue
 
         time=line[21:-1]
+
         hour=float(getHours(time))
         mins=float(getMinutes(time))
         secs=float(getSeconds(time))
@@ -52,6 +53,12 @@ def main():
         totHour+=int(hour)
         totMin+=int(mins)
         totSec+=int(secs)
+
+        totMin = int(totMin + (totSec/60))
+        totSec = totSec % 60
+
+        totHour =int(totHour + (totMin/60))
+        totMin = totMin % 60
 
     print("Total Time Spent in Vim: " + str(totHour) + ":" + str(totMin) + ":" + str(totSec))
 
