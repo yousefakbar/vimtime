@@ -38,7 +38,7 @@ def main():
     totMin=0
     totSec=0
 
-    timefile=open("/home/arrow/vimwatch.txt", "r")
+    timefile=open("/home/arrow/.cache/vimwatch.txt", "r")
 
     for line in timefile:
         if (line[0] == "#"):
